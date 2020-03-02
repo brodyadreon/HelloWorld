@@ -12,7 +12,6 @@ while counter < months:
     counter = counter+ 1
 print('Total balance after'+' ',months,' '+'months',"$",round(total_balance,2))
 
-#Question 2
 monthly_payment= float(input('Provide a monthly payment amount: '))
 
 if monthly_payment > x*interest_rate:
@@ -22,7 +21,6 @@ else:
     print('A monthly payment of'+' $', round(monthly_payment,2),' ','wont work! Youll be paying off your balance forever!')
     print('The minimum monthly payment for this balance would be $',round(x*interest_rate,2))
     
-#Question 3
 months_counter=0
 y=total_balance
 
