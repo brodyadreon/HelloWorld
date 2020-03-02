@@ -1,0 +1,36 @@
+purchase_per_month=float(input('Purchase per month:'))  #payment
+interest_rate=((float(input('Interest rate:'))*.01)/12) #interest rate
+months=int(input('Number of months:'))                  #months
+
+counter=0
+total_balance=0
+x=0
+
+while counter < months:
+    x=purchase_per_month+total_balance
+    total_balance=x+x*interest_rate
+    counter = counter+ 1
+print('Total balance after'+' ',months,' '+'months',"$",round(total_balance,2))
+
+#Question 2
+monthly_payment= float(input('Provide a monthly payment amount: '))
+
+if monthly_payment > x*interest_rate:
+    print('A monthly payment of'+' $',round(monthly_payment,2),' ','will work!')
+    print('The minimum monthly payment for this balance would be $',round(x*interest_rate,2))
+else:
+    print('A monthly payment of'+' $', round(monthly_payment,2),' ','wont work! Youll be paying off your balance forever!')
+    print('The minimum monthly payment for this balance would be $',round(x*interest_rate,2))
+    
+#Question 3
+months_counter=0
+y=total_balance
+
+if monthly_payment> x*interest_rate:
+    while y >= 0:
+        y=(y-monthly_payment)+(y-monthly_payment)*interest_rate
+        months_counter=months_counter+1
+    print('It will take ',months_counter,' months to pay off your credit card balance')
+    print('It will take ',round(months_counter/12,2),' years to pay off your credit card balance')
+else:
+    print(' ')
